@@ -23,12 +23,5 @@ class LocationsController < ApplicationController
 
     @gyms = json_parsed_data['results']
 
-
-
-
-
-
-
-
   end
 end
