@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
-  get '/gym/:address', to: 'locations#address'
+  get '/' => 'locations#index'
+
+  get '/gym' => 'locations#address'
 
 end

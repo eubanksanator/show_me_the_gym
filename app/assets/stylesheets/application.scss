@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+#heading {
+  margin-top: 200px;
+  h1 {
+    font-size: 45px;
+    color: yellow;
+  }
+}
+
+.btn {
+  background-color: black;
+  color: yellow;
+}
+
+body {
+  background-image: url('http://crossfitacernus.com/wp-content/uploads/2013/02/whatisCrossFit.jpg');
+}

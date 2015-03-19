@@ -2,9 +2,11 @@ require 'open-uri'
 require 'json'
 
 class LocationsController < ApplicationController
+    def index
+    end
 
   def address
-    address = (params['address'])
+    address = params[:address]
     safe_address = URI.encode(address)
     url = "https://maps.googleapis.com/maps/api/geocode/json?address=#{safe_address}"
 
@@ -22,24 +24,5 @@ class LocationsController < ApplicationController
     json_parsed_data = JSON.parse(open_url)
 
     @gyms = json_parsed_data['results']
-    place_id = json_parsed_data['results'][0]['place_id']
-# CANT GET PLACE ID FROM FIRST URL JSON TO GO INTO SECOND URL JSON TO RETRIEVE ADDRESS FOR THAT LOCATION.
-
-
-    # places ID request
-
-
-
-    url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=#{place_id}&key=#{ENV['googles_api_key']}"
-    open_url = open(url).read
-    json_parsed_data = JSON.parse(open_url)
-
-
-
-    @address_of_gym = json_parsed_data['result']
-
-
-
-
   end
 end

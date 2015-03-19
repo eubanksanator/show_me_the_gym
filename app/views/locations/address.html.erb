@@ -1,6 +1,8 @@
+<%= link_to 'Search more gyms', :back %>
+
 <ul>
 <% @gyms.each do |gym| %>
-  <li><%= gym['name'] %>---<%= gym['vicinity'] %></li>
+  <li><%= gym['name'] %><br><%= gym['vicinity'] %></li><p></p>
 <% end %>
 </ul>
 
