@@ -31,5 +31,24 @@
 }
 
 body {
+  background-color: black;
   background-image: url('http://crossfitacernus.com/wp-content/uploads/2013/02/whatisCrossFit.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
+.row  {
+  margin: 10px;
+}
+
+#the-list-of-gyms {
+  text-align: center;
+  opacity: .8;
+  font-size: 18px;
+  font-weight: 200%;
+}
+
+.gyms-list  {
+  list-style-type: none;
+}
+
+
