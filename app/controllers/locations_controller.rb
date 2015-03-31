@@ -5,7 +5,7 @@ class LocationsController < ApplicationController
     def index
     end
 
-  def address
+  def gyms
     address = params[:address]
     safe_address = URI.encode(address)
     url = "https://maps.googleapis.com/maps/api/geocode/json?address=#{safe_address}"
