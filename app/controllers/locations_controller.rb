@@ -18,7 +18,7 @@ class LocationsController < ApplicationController
 
     # grabs the address user put, stored it into Google API url, opened, JSON parsed it pulled out lat and lng from the hash array
 
-    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{lat},#{lng}&radius=8000&types=gym&keyword=fitness&key=#{ENV['googles_api_key']}"
+    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{lat},#{lng}&radius=8000&types=gym&keyword=fitness&key=#{GOOGLE_PLACES_API_KEY}"
 
     open_url = open(url).read
     json_parsed_data = JSON.parse(open_url)
